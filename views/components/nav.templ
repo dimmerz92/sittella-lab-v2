@@ -15,12 +15,12 @@ var links = [5]url{
 
 templ NavLink(href templ.SafeURL, label string) {
 	<li>
-		<a href={ href }>{ label }</a>
+		<a href={ href } class="hover:text-orange">{ label }</a>
 	</li>
 }
 
 templ NavBar() {
-	<ul>
+	<ul class="flex text-lg font-medium gap-4 p-4">
 		for _, item := range links {
 			@NavLink(item.href, item.label)
 		}

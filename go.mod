@@ -3,6 +3,7 @@ module sittellalab.com.au
 go 1.22.1
 
 require (
+	github.com/a-h/templ v0.2.636
 	github.com/joho/godotenv v1.5.1
 	github.com/labstack/echo/v4 v4.11.4
 )

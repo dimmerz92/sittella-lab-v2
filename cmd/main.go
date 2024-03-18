@@ -2,11 +2,11 @@ package main
 
 import (
 	"log"
-	"net/http"
 	"os"
 
 	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
+	"sittellalab.com.au/internal/pages"
 )
 
 func main() {
@@ -21,9 +21,7 @@ func main() {
 
 	e := echo.New()
 
-	e.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
+	e.GET("/", pages.Home)
 
 	e.Logger.Fatal(e.Start(":" + port))
 }

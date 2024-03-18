@@ -1,0 +1,28 @@
+package components
+
+type url struct {
+	href  templ.SafeURL
+	label string
+}
+
+var links = [5]url{
+	{"/", "Home"},
+	{"/about", "About"},
+	{"/services", "Services"},
+	{"/contact", "Contact"},
+	{"/faq", "FAQ"},
+}
+
+templ NavLink(href templ.SafeURL, label string) {
+	<li>
+		<a href={ href }>{ label }</a>
+	</li>
+}
+
+templ NavBar() {
+	<ul>
+		for _, item := range links {
+			@NavLink(item.href, item.label)
+		}
+	</ul>
+}

@@ -1,0 +1,12 @@
+package components
+
+import "strconv"
+
+templ Logo(height int, width int) {
+	<img
+		src="/static/public/images/logo_circle.svg"
+		alt="sittella lab logo, bird"
+		height={ strconv.Itoa(height) }
+		width={ strconv.Itoa(width) }
+	/>
+}

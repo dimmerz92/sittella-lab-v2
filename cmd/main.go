@@ -23,6 +23,7 @@ func main() {
 
 	// static file servers
 	e.Static("/static/public", "static/public")
+	e.File("/favicon.ico", "static/public/favicon.ico")
 
 	// page servers
 	e.GET("/", pages.Home)

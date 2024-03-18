@@ -21,6 +21,10 @@ func main() {
 
 	e := echo.New()
 
+	// static file servers
+	e.Static("/static/public", "static/public")
+
+	// page servers
 	e.GET("/", pages.Home)
 
 	e.Logger.Fatal(e.Start(":" + port))

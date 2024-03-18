@@ -1,5 +1,7 @@
 package views
 
+import "sittellalab.com.au/views/components"
+
 templ Layout() {
 	<!DOCTYPE html>
 	<html lang="en">
@@ -7,9 +9,11 @@ templ Layout() {
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 			<link rel="stylesheet" href="static/public/styles.css"/>
-			<title>Sittella Lab | Perth Web Development | Perth Data Analytics</title>
+			<title>Sittella Lab | Perth Web Development & Data Analytics</title>
 		</head>
 		<body>
+			@components.Header()
+			<main class="h-[200vh]"></main>
 			{ children... }
 		</body>
 	</html>

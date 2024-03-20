@@ -11,10 +11,12 @@ templ Layout() {
 			<link rel="stylesheet" href="static/public/styles.css"/>
 			<title>Sittella Lab | Perth Web Development & Data Analytics</title>
 		</head>
-		<body>
+		<body class="grid min-h-screen" style="grid-template-rows: auto 1fr auto">
 			@components.Header()
-			<main class="h-[200vh]"></main>
-			{ children... }
+			<main>
+				{ children... }
+			</main>
+			@components.Footer()
 		</body>
 	</html>
 }
